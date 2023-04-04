@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Aula Universitària del Palau d'Anglesola"
+    />
+    <meta name="theme-color" content="" />
+    <link rel="apple-touch-icon" href="/img/favicon-dark.svg" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="shortcut icon" href="/img/favicon-dark.svg" type="image/icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100;300;400;500&family=Lato:wght@100;300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo:wght@200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/styles/styles.css" />
+    <script type="module" src="/assets/js/app.js"></script>
+    <title>Aula Universitaria</title>
+  </head>
+  <body
+    class="w-screen overflow-x-hidden bg-white dark:from-bgdark dark:to-bgdark dark:bg-gradient-to-r font-subtitle"
+  >
+    <header class="fixed top-0 left-0 z-40 w-screen">
+      <nav
+        class="flex justify-center h-[70px] px-1 bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700 z-50"
+      >
+        <div
+          class="container flex flex-wrap items-center justify-between mx-auto"
+        >
+          <a href="./index.html" class="flex items-center justify-between">
+            <img
+              src="./public/img/Logo_Aula_2 (1).png"
+              class="flex items-center justify-center h-10 lg:ml-4 md:h-12"
+              alt="Logo Aula Universitaria"
+            />
+          </a>
+          <button
+            data-collapse-toggle="navbar-dropdown"
+            type="button"
+            class="items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="navbar-dropdown"
+            aria-expanded="false"
+            id="menu-toggle"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="w-6 h-6"
+              aria-hidden="true"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+          <div class="hidden w-full md:block md:w-auto" id="navbar">
+            <ul
+              class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800"
+            >
+              <li>
+                <a
+                  href="./index.html"
+                  class="block py-2 pl-3 pr-4 text-white bg-[#2a466d] rounded md:text-base md:hover:text-yellow-500 md:text-gray-700 lg:text-lg md:bg-transparent md:p-0"
+                  aria-current="page"
+                  >Inici</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./aula.html"
+                  class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 lg:text-lg md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white hover:text-yellow-500 md:dark:hover:bg-transparent md:text-base"
+                  >L'aula</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./calendari.html"
+                  class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 lg:text-lg md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white hover:text-yellow-500 md:dark:hover:bg-transparent md:text-base"
+                  >Calendari</a
+                >
+              </li>
+              <li>
+                <button
+                  id="dropdownNavbarLink"
+                  data-dropdown-toggle="dropdownNavbar"
+                  class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto md:text-base lg:text-lg hover:text-yellow-500"
+                >
+                  Programa
+                  <svg
+                    class="w-5 h-5 ml-1"
+                    aria-hidden="true"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                </button>
+                <!-- Dropdown menu -->
+                <div
+                  id="dropdownNavbar"
+                  class="absolute z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow sm:absolute w-44"
+                >
+                  <ul
+                    class="py-2 text-sm text-gray-700 dark:text-gray-400"
+                    aria-labelledby="dropdownLargeButton"
+                  >
+                    <li>
+                      <a
+                        href="./trimestre1.html"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white md:text-base"
+                        >Trimestre 1</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="./trimestre2.html"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white md:text-base"
+                        >Trimestre 2</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="./trimestre3.html"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white md:text-base"
+                        >Trimestre 3</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <button
+                  id="dropdownButton"
+                  class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto md:text-base lg:text-lg hover:text-yellow-500"
+                >
+                  Activitats
+                  <svg
+                    class="w-5 h-5 ml-1"
+                    aria-hidden="true"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                </button>
+                <!-- Dropdown menu -->
+                <div
+                  id="dropdownMenu"
+                  class="absolute z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44"
+                >
+                  <ul
+                    class="py-2 text-sm text-gray-700 dark:text-gray-400"
+                    aria-labelledby="dropdownLargeButton"
+                  >
+                    <li>
+                      <a
+                        href="./presentacions.html"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white md:text-base"
+                        >Presentacións llibres</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="./sortides.html"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white md:text-base"
+                        >Sortides</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="./obres-teatre.html"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white md:text-base"
+                        >Obres de teatre</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+
+              <li>
+                <a
+                  href="./soci.html"
+                  class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 dark:text-gray-400 md:text-base lg:text-lg hover:text-yellow-500"
+                  >Feste soci</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- --------- Main Section --------- -->
+    <main class="w-full">
+      <section
+        class="flex flex-col items-center justify-center w-full pb-16 mt-12 mb-32 overflow-hidden bg-cover h-96"
+        style="
+          background-attachment: fixed;
+          background-image: linear-gradient(
+              rgba(0, 0, 0, 0.503),
+              rgba(0, 0, 0, 0.476)
+            ),
+            url('public/img/castanyada_que_es_y_su_origen_52798_orig.jpg');
+        "
+      >
+        <h1
+          class="flex justify-center text-xl font-extrabold tracking-tight text-white sm:text-4xl item-center mt-28"
+        >
+          Aula Universitària del Palau d'Anglesola
+        </h1>
+      </section>
+      <section>
+        <h2
+          class="mt-16 mb-10 text-4xl font-extrabold tracking-tight text-center text-gray-900 dark:text-white"
+        >
+          Programa tercer trimestre
+        </h2>
+
+        <div class="flex flex-wrap items-center justify-center gap-10">
+          <div
+            class="w-[400px] h-[500px] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+          >
+            <div class="flex flex-col items-center justify-center pb-10">
+              <img
+                class="w-20 h-20 mb-3 bg-cover rounded-full shadow-lg mt-7"
+                src="./public/img/Josep-maria-sole-sabate.jpeg"
+                alt="Bonnie image"
+              />
+              <h3 class="mt-4 text-xl"><b>Vicenç Lozano</b></h3>
+              <h4 class="mt-2 text-lg">Dijous 13 d'Abril</h4>
+              <p class="p-4 m-2 text-base text-center">
+                Periodista i escriptor. Cursà les carreres de Periodisme i
+                Història a la Universtat Autònoma de Bellaterra. Des de el 1984
+                fins el 2020 ha estat rector de la Secció Internacional dels
+                serveis Informatius de TV3 (Televisió de Catalunya).
+              </p>
+              <p class="mb-4 text-lg">
+                Conferència: <b>"Intrigues y poder al Vaticà"</b>
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="w-[400px] h-[500px] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+          >
+            <div class="flex flex-col items-center pb-10">
+              <img
+                class="w-20 h-20 mt-4 mb-3 bg-cover rounded-full shadow-lg"
+                src="./public/img/Joan-yeguas.jpeg"
+                alt="Bonnie image"
+              />
+              <h3 class="mt-4 text-xl"><b>Assumpta Montellà</b></h3>
+              <h4 class="mt-2 text-lg">Divendres 28 d'Abril</h4>
+              <p class="p-4 m-2 text-base text-center">
+                Historiadora y escritora catalana. Llicenciada en Història per
+                l'UAB. Assessora hisòrica en documentals de TV3 i co-guionista
+                en obres teatrals de temàtica històrica com La Maternitat
+                d'Elna, In Memoriam i El Silenci dels Telers.
+              </p>
+              <p class="m-2 text-lg text-center">
+                Conferència:
+                <b>"La maternitat d'Elna"</b>
+              </p>
+            </div>
+          </div>
+          <div
+            class="w-[400px] h-[500px] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+          >
+            <div class="flex flex-col items-center pb-10">
+              <img
+                class="w-20 h-20 mt-4 mb-3 bg-center bg-auto rounded-full shadow-lg"
+                src="./public/img/arnau-vilaró.jpeg"
+                alt="Bonnie image"
+              />
+              <h3 class="mt-4 text-xl"><b>Pol Avinyó i Antoni Ros Marbà</b></h3>
+              <h4 class="mt-2 text-lg">Dijous 4 de Maig</h4>
+              <p class="p-4 m-2 text-base text-center">
+                Atoni Ros Marbà és un director d'orquestra i compositor
+                català.Va estudiar al Conservatori Municipal de Música de
+                Barcelona.Li han concedit igualment el Premio Nacional de Música
+                del Ministeri de Cultura i la Creu de Sant Jordi de la
+                Generalitat de Catalunya i la Medalla d'Or del Gran Teatre del
+                Liceu de Barcelona, el gener de 2012.
+              </p>
+              <p class="text-lg text-center">
+                Conferència:
+                <b>"Una tarda amb el mestre Ros Marbà"</b>
+              </p>
+            </div>
+          </div>
+          <div
+            class="w-[400px] h-[500px] bg-white border border-gray-200 rounded-lg shadow flex justify-center items-center dark:bg-gray-800 dark:border-gray-700"
+          >
+            <div class="flex flex-col items-center pb-10">
+              <img
+                class="w-20 h-20 mt-4 mb-3 bg-center bg-auto rounded-full shadow-lg"
+                src="./public/img/montse-perez-serra.jpeg"
+                alt="Bonnie image"
+              />
+              <h3 class="mt-4 text-xl"><b>Genís Sinca i Algué</b></h3>
+              <h4 class="mt-2 text-lg">Dijous 11 de Maig</h4>
+              <p class="p-4 m-2 text-base text-center">
+                Escriptor català guanyador del premi Josep Pla de Narrativa del
+                2013. És llicenciat en Periodisme. Va ser redactor al Diari
+                d'Andorra i correponsal a Itàlia per diari de COM Ràdio.
+              </p>
+              <p class="text-lg text-center">
+                Conferència:
+                <b>"Les 7 maravelles del món antic"</b>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- --------- Footer Seccion --------- -->
+
+    <footer
+      class="p-4 mt-12 rounded-lg shadow bg-amber-400 md:px-6 md:py-8 dark:bg-gray-900"
+    >
+      <div class="flex flex-col items-center justify-between md:flex-row">
+        <a href="./index.html" class="flex items-center mb-4 sm:mb-0">
+          <img
+            src="./public/img/Logo_Aula_2 (1).png"
+            class="h-16 mt-4 mr-3"
+            alt="Aula Universitaria Logo"
+          />
+        </a>
+        <div class="flex items-center justify-around gap-4 mt-6">
+          <a
+            href="mailto:auladelpalaudanglesola@gmail.com"
+            aria-label="Send me an email"
+            target="_blank"
+          >
+            <i class="hover:text-[#2a466d] text-3xl fa-solid fa-envelope"></i>
+          </a>
+          <a
+            href="https://www.facebook.com/profile.php?id=100072052001419"
+            target="_blank"
+            aria-label="Check our Facebook"
+          >
+            <i class="text-3xl hover:text-[#2a466d] fa-brands fa-facebook"></i>
+          </a>
+          <a
+            href="https://www.instagram.com/auladelpalaudanglesola/"
+            target="_blank"
+            aria-label="Send our instagram"
+          >
+            <i class="hover:text-[#2a466d] text-3xl fa-brands fa-instagram"></i>
+          </a>
+          <a
+            href="https://twitter.com/auladelpalau?lang=ca"
+            target="_blank"
+            aria-label="Check our Twitter"
+          >
+            <i class="hover:text-[#2a466d] text-3xl fa-brands fa-twitter"></i>
+          </a>
+        </div>
+      </div>
+      <ul
+        class="flex items-center justify-center mt-8 mb-6 text-sm text-black sm:mb-0"
+      >
+        <li>
+          <a href="#" class="mr-4 hover:underline md:mr-6">About</a>
+        </li>
+        <li>
+          <a href="#" class="mr-4 hover:underline md:mr-6">Privacy Policy</a>
+        </li>
+        <li>
+          <a href="#" class="mr-4 hover:underline md:mr-6">Licensing</a>
+        </li>
+        <li>
+          <a href="#" class="hover:underline">Contact</a>
+        </li>
+      </ul>
+      <hr class="my-6 border-black sm:mx-auto lg:my-8" />
+
+      <a
+        href="https://www.linkedin.com/in/ares-miro-serra/"
+        class="flex justify-center mt-2 item-center hover:underline"
+        target="_blank"
+        >Fet amb 🖤 per Ares Miró Serra
+      </a>
+    </footer>
+
+    <script type="module" src="/assets/js/tailwind.js"></script>
+  </body>
+</html>
