@@ -24,6 +24,13 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/assets/styles/styles.css" />
+    <script
+      id="Cookiebot"
+      src="https://consent.cookiebot.com/uc.js"
+      data-cbid="4bf22f15-8bb4-4250-8169-baf4bc94a166"
+      data-blockingmode="auto"
+      type="text/javascript"
+    ></script>
     <script type="module" src="/assets/js/app.js"></script>
     <title>Aula Universitaria</title>
   </head>
@@ -466,7 +473,21 @@
                 placeholder="Deixa el teu comentari..."
               ></textarea>
             </div>
-            <div class="flex justify-center item-le">
+            <div>
+              <input type="checkbox" required name="policy" />
+              <label
+                >He llegit i accepto la
+                <a
+                  href="#"
+                  class="underline"
+                  target="_blank"
+                  aria-label="accepta la política de privacitat"
+                >
+                  política de privacitat</a
+                ></label
+              >
+            </div>
+            <div class="flex justify-center">
               <button
                 type="submit"
                 class="w-32 h-12 mt-16 text-lg font-bold bg-amber-400 text-bw rounded-3xl hover:bg-yellow-500"
@@ -566,16 +587,17 @@
         class="flex items-center justify-center mt-8 mb-6 text-sm text-black sm:mb-0"
       >
         <li>
-          <a href="#" class="mr-4 hover:underline md:mr-6">About</a>
+          <a href="#" class="mr-4 hover:underline md:mr-6"
+            >Política de privacitat
+          </a>
         </li>
         <li>
-          <a href="#" class="mr-4 hover:underline md:mr-6">Privacy Policy</a>
+          <a href="#" class="mr-4 hover:underline md:mr-6"
+            >Política de Cookies</a
+          >
         </li>
         <li>
-          <a href="#" class="mr-4 hover:underline md:mr-6">Licensing</a>
-        </li>
-        <li>
-          <a href="#" class="hover:underline">Contact</a>
+          <a href="#" class="mr-4 hover:underline md:mr-6">Avís Legal</a>
         </li>
       </ul>
       <hr class="my-6 border-black sm:mx-auto lg:my-8" />
@@ -586,6 +608,12 @@
         target="_blank"
         >Fet amb 🖤 per Ares Miró Serra
       </a>
+      <script
+        id="CookieDeclaration"
+        src="https://consent.cookiebot.com/4bf22f15-8bb4-4250-8169-baf4bc94a166/cd.js"
+        type="text/javascript"
+        async
+      ></script>
     </footer>
 
     <script type="module" src="/assets/js/tailwind.js"></script>
